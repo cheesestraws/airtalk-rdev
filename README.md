@@ -19,7 +19,8 @@ A note on what each pair of *.h and *.c files does is in the .h file.
 
 # Building it
 
-This is a CodeWarrior project suitable for building with CodeWarrior Pro 4.  
+This is a CodeWarrior project suitable for building with CodeWarrior Pro 4.
+
 The resource files are macbinary encoded.  If you are preparing your working
 copy under OS X, you can use scripts/unpack-resources to reconstitute them,
 then when you change something, scripts/pack-resources to re-encode them
