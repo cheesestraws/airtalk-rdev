@@ -28,5 +28,7 @@ for git.
 
 # Credits
 
+John-Robert La Porta provided an awesome icon which makes this software look far more professional than it deserves.
+
 This code owes a lot to the example code provided by Apple DTS back in the day:
 my best wishes to them, whatever they are doing now.
