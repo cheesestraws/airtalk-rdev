@@ -77,7 +77,7 @@ void sendConfiguration(Str255 ssid, Str255 pwd) {
 	atp.SREQ.retryCount = 1;
 	
 	err = PSendRequest(&atp, 0);
-	if (err) {
+	if (err && err != -1096) {
 		// and if it fails we just display an error and hope for the best
 		SysBeep(1);
 		getRsrcStr(kATPSendError, errorMessage);
