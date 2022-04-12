@@ -30,7 +30,7 @@ int clearConfiguration() {
 	
 	// First, open the AppleTalk driver
 	err = OpenDriver("\p.MPP",&mpp);
-	if (err && err != -1096) {
+	if (err) {
 		SysBeep(1);
 		printf("Couldn't load AppleTalk driver; something's gone badly wrong.  Sorry.\n");
 		return 0;
@@ -61,7 +61,7 @@ int clearConfiguration() {
 	atp.SREQ.retryCount = 1;
 	
 	err = PSendRequest(&atp, 0);
-	if (err) {
+	if (err && err != -1096) {
 		// and if it fails we just display an error and hope for the best
 		SysBeep(1);
 
