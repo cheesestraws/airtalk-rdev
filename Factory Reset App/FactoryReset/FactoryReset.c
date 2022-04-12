@@ -30,7 +30,7 @@ int clearConfiguration() {
 	
 	// First, open the AppleTalk driver
 	err = OpenDriver("\p.MPP",&mpp);
-	if (err && err != 1096) {
+	if (err && err != -1096) {
 		SysBeep(1);
 		printf("Couldn't load AppleTalk driver; something's gone badly wrong.  Sorry.\n");
 		return 0;
