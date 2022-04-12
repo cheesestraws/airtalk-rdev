@@ -30,7 +30,7 @@ int clearConfiguration() {
 	
 	// First, open the AppleTalk driver
 	err = OpenDriver("\p.MPP",&mpp);
-	if (err) {
+	if (err && err != 1096) {
 		SysBeep(1);
 		printf("Couldn't load AppleTalk driver; something's gone badly wrong.  Sorry.\n");
 		return 0;
@@ -90,6 +90,10 @@ int main(void)
 	if (inbuf[0] != 121) {
 		printf("Bye!\n\n");
 		return 0;
+	}
+	
+	if (clearConfiguration()) {
+		printf("Your AirTalk should now reboot and not connect to a WiFi network.\n\n");
 	}
 
 	return 0;
