@@ -9,6 +9,10 @@ chosen SSID and password, which the AirTalk will intercept.
 This packet interface is not yet stable, please do not make any assumptions
 based upon it.
 
+# Archived
+
+As part of my move away from using github, and since I do not anticipate any further work on this, this repository has been made read-only.  I encourage people who want a copy of the code to take one, as I do not guarantee its continued availability here or through any other channel I control.
+
 # How to read the code
 
 Control flow starts in "header.c"; the function the Chooser calls is called
